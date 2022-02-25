@@ -8,7 +8,7 @@ public class TrackObject : MonoBehaviour
     [SerializeField]
     GameObject objectToTrack;
     public string objectName;
-    //public bool trackObjectCenter;
+    public Vector3 offset = new Vector3(0, 0, 0);
 
     // Update is called once per frame
     void Update()
@@ -19,9 +19,8 @@ public class TrackObject : MonoBehaviour
         }
         else
         {
-            //if (trackObjectCenter)
-            //    transform.position = objectToTrack.GetComponent<Renderer>().bounds.center;
             transform.SetPositionAndRotation(objectToTrack.transform.position, objectToTrack.transform.rotation);
+            transform.Translate(offset);
         }
     }
 }

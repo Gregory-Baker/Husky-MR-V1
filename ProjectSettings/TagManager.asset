@@ -9,6 +9,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - zomBunny
+  - zedLeft
   layers:
   - Default
   - TransparentFX
