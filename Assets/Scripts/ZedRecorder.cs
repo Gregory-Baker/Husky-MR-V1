@@ -21,7 +21,7 @@ public class ZedRecorder : MonoBehaviour
     {
         string folder = "C:/Users/g-baker-admin/Documents/MR_Experiment_Data/";
         string datetime = DateTime.Now.Date.Year + "_" + DateTime.Now.Date.Month + "_" + DateTime.Now.Date.Day + "-" + DateTime.Now.TimeOfDay.Hours + "_" + DateTime.Now.TimeOfDay.Minutes + "_" + DateTime.Now.TimeOfDay.Seconds;
-        string outfile = folder + camSwitcher.participantID + "/" + camSwitcher.cam + "/" + datetime + ".svo";
+        string outfile = folder + camSwitcher.participantID + "/" + camSwitcher.cam + "/" + camSwitcher.participantID + "_" + camSwitcher.cam + "_" + datetime + ".svo";
         Debug.Log("Outfile: " + outfile);
         zedManager.zedCamera.EnableRecording(outfile);
 

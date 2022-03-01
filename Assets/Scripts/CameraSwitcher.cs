@@ -6,9 +6,9 @@ using UnityEngine;
 public class CameraSwitcher : MonoBehaviour
 {
     public enum XRCamera {
-        THETA,
-        ZED,
-        ZED_NOVR
+        theta,
+        zed,
+        zed_novr
     }
 
     public int participantID;
@@ -38,7 +38,7 @@ public class CameraSwitcher : MonoBehaviour
 
     void Update()
     {
-        if (cam == XRCamera.THETA)
+        if (cam == XRCamera.theta)
         {
             foreach (GameObject zedObject in zedObjects)
             {
@@ -59,7 +59,7 @@ public class CameraSwitcher : MonoBehaviour
 
         }
 
-        if (cam == XRCamera.ZED)
+        if (cam == XRCamera.zed)
         {
             foreach (GameObject thetaObject in thetaObjects)
             {
@@ -79,7 +79,7 @@ public class CameraSwitcher : MonoBehaviour
             }
         }
 
-        if (cam == XRCamera.ZED_NOVR)
+        if (cam == XRCamera.zed_novr)
         {
             foreach (GameObject thetaObject in thetaObjects)
             {
